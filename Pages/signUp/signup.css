@@ -1,0 +1,74 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  /* Hide the scrollbar */
+  .no-scroll-bar::-webkit-scrollbar {
+    width: 0.2rem;
+    /* Set the width to a very small value */
+  }
+  
+  /* Optional: Customize scrollbar track and thumb appearance */
+  .no-scroll-bar::-webkit-scrollbar-track {
+    background: transparent; /* Track color */
+  }
+  
+  .no-scroll-bar::-webkit-scrollbar-thumb {
+    background: rgba(249, 244, 244, 0.2); /* Thumb color */
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+    background-color: var(--background-color);
+    overflow-x: hidden !important;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    gap: 5vw;
+  }
+  
+.signup-form{
+    height: 85vh;
+    margin: auto;
+    width: 100vw;
+    overflow: hidden;
+    
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--secondary-color);
+    align-items: start;
+}
+
+.search-input{
+    margin: 0;
+    align-self: flex-start;
+}
+
+.form-check{
+    padding: 1px;
+    margin: 0;
+}
+
+.login{
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    border-radius: 100%;
+}
+
+.text-body-secondaryy{
+    color: var(--primary-color);
+}
