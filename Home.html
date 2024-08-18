@@ -13,7 +13,6 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<link rel="stylesheet" href="./custom.css">
 </head>
 
 <body>
@@ -40,13 +39,27 @@
                 <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
             </form>
 
-            <div  class="text-end d-flex justify-content-between">
-              <button style="margin-right: 1vw ;"   type="button" class=" login outline_btn column-gap-3  ">
+            <div  class="d-flex justify-content-end  column-gap-3">
+              
+              <button  type="button" class=" login outline_btn column-gap-3 ">
                 <i  class="fa fa-user"></i>
                 <a class="login" href="./Pages/login/logIn.html">Login</a>
               </button>
-              
-              <button type="button" class="btn outline_btn"><a  href="Pages/signUp/signUp.html">Sign Up</a></button>
+
+                <button id="signup" type="button" class="btn outline_btn signup "><a  href="./Pages/signUp/signUp.html">signUp</a>
+                </button>
+
+                
+              <div class="userProfile">
+                <i  class="fa fa-user"></i>
+                      <a class="" href="./pages/userProfile/userProfile.html">user</a>
+              </div>
+
+
+                <button id="cart" style="color:var(--primary-color);" class="cartt  " type="submit">
+                    <i class="fa-solid fa-cart-shopping"></i></i> 
+                    <a href="">Cart</a>
+                </button>
             </div>
         </div>
     </header>
@@ -81,15 +94,26 @@
             </form>
 
             <div  class="d-flex justify-content-end  column-gap-3">
+              
               <button  type="button" class=" login outline_btn column-gap-3 ">
                 <i  class="fa fa-user"></i>
-                <a class="login" href="./Pages/login/logIn.html">Login</a>
+                <a class="login" href="./Pages/login/logIn.html">user</a>
               </button>
-                <button type="button" class="btn outline_btn "><a  href="./Pages/signUp/signUp.html"></a></button>
-                <!-- <button class="cart  d-flex align-items-center column-gap-2 " type="submit">
+
+
+
+              <button  id="signup" type="button" class="btn outline_btn signup "><a  href="./Pages/signUp/signUp.html">signUp</a>
+              </button>
+
+              <div class="userProfile">
+                <i style="font-size: 17px;"  class="fa fa-user"></i>
+                      <a class="" href="./pages/userProfile/userProfile.html">user</a>
+              </div>
+
+                <button id="cart" style="color:var(--primary-color);" class="cartt  " type="submit">
                     <i class="fa-solid fa-cart-shopping"></i></i> 
                     <a href="">Cart</a>
-                </button> -->
+                </button>
             </div>
 
         </div>
@@ -113,18 +137,18 @@
                       <i  class="fa fa-user"></i>
                       <a class="login" href="./pages/login/logIn.html">Login</a>
                     </button>
+                    
+              <div class="userProfile">
+                <i  class="fa fa-user"></i>
+                      <a class="" href="./pages/userProfile/userProfile.html">user</a>
+              </div>
+
+                    <button id="cart" style="color:var(--primary-color);" class="cartt " type="submit">
+                      <i class="fa-solid fa-cart-shopping"></i></i> 
+                      <a href="">Cart</a>
+                  </button>
                     <!-- Hamburger menu -->
                     <i onclick="sidebarHandler()" style="font-size:25px;" class=" mx-2  fa fa-bars"></i>
-
-                <!-- SIDEBAR -->
-       
-
-
-                <!-- <button type="button" class="btn  btn-primary">Sign-up</button> -->
-                <!-- <button class="cart  d-flex align-items-center column-gap-2 " type="submit">
-                    <i class="fa-solid fa-cart-shopping"></i></i> 
-                    <a href="">Cart</a>
-                </button> -->
             </div>
 
 
@@ -144,12 +168,18 @@
     <!-- SIDEBAR FOR MOBILE HEADER -->
 
     
-  <div style="height: 100%;"  id="sideBar" class="hidden  w-100 glassmorphism  flex-column flex-shrink-0 p-3 " style="width: 280px;">
+  <div style="height: 100vh; width: 100vw;; z-index: 100;"  id="sideBar" class="hidden  w-100 glassmorphism  flex-column flex-shrink-0 p-3 " style="width: 280px;">
     <div class="sidebarTop d-flex justify-content-between align-items-center"> 
       <div class=" d-flex">
 
          
         <div  class="d-flex align-items-center justify-content-end  column-gap-1">
+          
+          <div class="userProfile">
+            <i  class="fa fa-user"></i>
+            <a  href="./pages/userProfile/userProfile.html">User</a>
+          </div>
+            
           <button  type="button" class=" login outline_btn column-gap-3 ">
               <i  class="fa fa-user"></i>
               <a class="login" href="./Pages/login/logIn.html">Login</a>
