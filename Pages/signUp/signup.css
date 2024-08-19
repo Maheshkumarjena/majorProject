@@ -31,12 +31,15 @@
     background-color: var(--background-color);
     color: var(--primary-color);
     gap: 5vw;
+    overflow: hidden;
   }
   
 .signup-form{
     height: 85vh;
     margin: auto;
-    width: 100vw;
+    margin-top: 10vh;
+    width: fit-content;
+    padding: 0px 2vw;
     overflow: hidden;
     
 }
@@ -47,6 +50,8 @@
     gap: 10px;
     background-color: var(--secondary-color);
     align-items: start;
+    padding: 2vw;
+    
 }
 
 .search-input{

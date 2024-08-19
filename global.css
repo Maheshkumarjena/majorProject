@@ -1,4 +1,36 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&family=Nunito:wght@400;700&family=Oswald:wght@400;700&family=Pacifico&display=swap');
+
+:root {
+    /* COLORS */
+--primary-color: #081520;        /* Primary buttons, links, and important highlights */
+--secondary-color: #eee4e3;      /* Secondary buttons, alerts, or call-to-action elements */
+--background-color: #f6f8fa;     /* Light background to contrast with the dark primary color */
+--text-color: #1c1c1c;           /* Dark text for readability against the light background */
+--heading-color: #2f3e4e;        /* Darker heading color to provide hierarchy */
+--hover-color: #25517e;          /* Hover states on buttons, links, etc. */
+--shadow-color: rgba(182, 126, 126, 0.1); /* Box shadows */
+--accent-color: #3b84a1;         /* Accents like badges, notifications, or highlights */
+
+
+    /* FONTS */
+ /* Primary Font: Use for headers, navigation bar, and buttons */
+ --primary-font: 'Montserrat', sans-serif;
+
+ /* Secondary Font: Use for body text, product descriptions, and blog posts */
+ --secondary-font: 'Lato', sans-serif;
+
+ /* Accent Font: Use for callouts and section titles (e.g., Featured Products, Sale Items) */
+ --accent-font: 'Oswald', sans-serif;
+
+ /* Support Font: Use for footer text, legal text, and small print */
+ --support-font: 'Nunito', sans-serif;
+
+ /* Decorative Font: Use for logos, special promotions, and sale banners */
+ --decorative-font: 'Pacifico', cursive;
+
+}
+
 
 a{
   text-decoration: none;
@@ -226,6 +258,10 @@ flex-direction: column;
     width: 100vw;
 }
 
+.userr{
+  max-width: 66px;
+  overflow: hidden;
+}
 
 .cartt{
   font-family: var(--primary-font);
@@ -233,7 +269,7 @@ flex-direction: column;
   align-items: center;
   opacity:1;
   gap: 1vw;
-  display: flex;
+  display: none;
   /* top: -2px; */
   /* position: relative; */
   color: var(--primary-color);
@@ -345,6 +381,8 @@ color: var(--secondary-color);
     font-family: var(--primary-font);
     /* color: var(--primary-color); */
 }
+
+
 .login:hover a{
     color: whitesmoke;
 }

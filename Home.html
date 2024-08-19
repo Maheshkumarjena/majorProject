@@ -20,214 +20,218 @@
 <body>
 
     <!-- Desktop header -->
-    <!-- larger than 1030 px  -->
 
-    <header id="large-header" class="Header p-3 large-header ">
-        <div class=" H-container  d-flex flex-wrap align-items-center justify-content-between ">
-            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                <img class="logo" src="assets/logo .png" alt="logo here">
+    <!-- larger than 1030 px  -->
+  <!-- Desktop header -->
+
+  <header id="large-header" class="Header p-3 large-header ">
+    <div class=" H-container  d-flex flex-wrap align-items-center justify-content-between ">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <img class="logo" src="assets/logo .png" alt="logo here">
+        </a>
+
+        <ul class="nav col-12 col-lg-auto  mb-md-0">
+          <li><a id="nav-one" onclick="sidebarHandler()" href="./Pages/Men/Men.html" class="nav-link px-2 ">Men</a></li>
+          <li><a id="nav-two" onclick="sidebarHandler()" href="./Pages/Women/Women.html" class="nav-link px-2 ">Women</a></li>
+          <li><a id="nav-three" onclick="sidebarHandler()" href="./Pages/Kids/Kids.html" class="nav-link px-2 ">Kids</a></li>
+          <li><a id="nav-four" onclick="sidebarHandler()" href="#Featured" class="nav-link px-2 ">Featured</a></li>
+        
+        </ul>
+
+        <form class="search-form col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+            <input type="search" class="search-input " placeholder="Search..." aria-label="Search">
+            <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
+        </form>
+
+        <div  class="d-flex justify-content-end  column-gap-3">
+          
+          <button  type="button" class=" login outline_btn column-gap-3 ">
+            <i  class="fa fa-user"></i>
+            <a class="login" href="./Pages/login/logIn.html">Login</a>
+          </button>
+
+            <button id="signup" type="button" class="btn outline_btn signup "><a  href="./Pages/signUp/signUp.html">signUp</a>
+            </button>
+
+            
+          <div class="userProfile">
+            <i  class="fa fa-user"></i>
+                  <a class="userr" href="./pages/userProfile/userProfile.html">user</a>
+          </div>
+
+
+            <button id="cart" style="color:var(--primary-color);" class="cartt  " type="submit">
+                <i href="Pages/Cart/Cart.html" class="fa-solid fa-cart-shopping"></i></i> 
+                <a href="Pages/Cart/Cart.html">Cart</a>
+            </button>
+
+            <button style="border: none; background: transparent;" >
+              <i id="dots" class="fa-solid fa-ellipsis"></i>
+
+            </button>
+        </div>
+    </div>
+</header>
+
+
+
+  <!-- small Header -->
+
+  <header id="small-header" class="Header  small-header">
+    <div class="px-3 py-2  border-bottom ">
+        <div class="d-flex justify-content-between">
+            <img class="logo mx-2" src="assets/logo .png" alt="">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                <use xlink:href="#bootstrap" />
+            </svg>
             </a>
 
             <ul class="nav col-12 col-lg-auto  mb-md-0">
-                <li><a href="./Pages/Men/Men.html" class="nav-link px-2 ">Men</a></li>
-                <li><a href="./Pages/Women/Women.html" class="nav-link px-2 ">Women</a></li>
-                <li><a href="./Pages/Kids/Kids.html" class="nav-link px-2 ">Kids</a></li>
-                <li><a href="#Featured" class="nav-link px-2 ">Featured</a></li>
+              <li><a id="nav-one" onclick="sidebarHandler()" href="./Pages/Men/Men.html" class="nav-link px-2 ">Men</a></li>
+              <li><a id="nav-two" onclick="sidebarHandler()" href="./Pages/Women/Women.html" class="nav-link px-2 ">Women</a></li>
+              <li><a id="nav-three" onclick="sidebarHandler()" href="./Pages/Kids/Kids.html" class="nav-link px-2 ">Kids</a></li>
+              <li><a id="nav-four" onclick="sidebarHandler()" href="#Featured" class="nav-link px-2 ">Featured</a></li>
+            
             </ul>
-
-            <form class="search-form col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                <input type="search" class="search-input " placeholder="Search..." aria-label="Search">
-                <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
-            </form>
-
-            <div  class="d-flex justify-content-end  column-gap-3">
-              
-              <button  type="button" class=" login outline_btn column-gap-3 ">
-                <i  class="fa fa-user"></i>
-                <a class="login" href="./Pages/login/logIn.html">Login</a>
-              </button>
-
-                <button id="signup" type="button" class="btn outline_btn signup "><a  href="./Pages/signUp/signUp.html">signUp</a>
-                </button>
-
-                
-              <div class="userProfile">
-                <i  class="fa fa-user"></i>
-                      <a class="" href="./pages/userProfile/userProfile.html">user</a>
-              </div>
-
-
-                <button id="cart" style="color:var(--primary-color);" class="cartt  " type="submit">
-                    <i href="Pages/Cart/Cart.html" class="fa-solid fa-cart-shopping"></i></i> 
-                    <a href="Pages/Cart/Cart.html">Cart</a>
-                </button>
-
-                <button style="border: none; background: transparent;" >
-                  <i id="dots" class="fa-solid fa-ellipsis"></i>
-
-                </button>
-            </div>
         </div>
-    </header>
+    </div>
+    <!-- Bottom nav -->
+    <div class="d-flex align-items-center py-2 px-4 justify-content-between">
+            
+        <form class="search-form  d-flex justify-content-between  col-lg-auto" role="search">
+            <input type="search" class="search-input " placeholder="Search..." aria-label="Search">
+            <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
+        </form>
 
-
-    <!-- smaller header -->
-
-    <header id="small-header" class="Header  small-header">
-        <div class="px-3 py-2  border-bottom ">
-            <div class="d-flex justify-content-between">
-                <img class="logo mx-2" src="assets/logo .png" alt="">
-                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-                    <use xlink:href="#bootstrap" />
-                </svg>
-                </a>
-
-                <ul class="nav col-12 col-lg-auto  mb-md-0">
-                  <li><a href="./Pages/Men/Men.html" class="nav-link px-2 ">Men</a></li>
-                  <li><a href="./Pages/Women/Women.html" class="nav-link px-2 ">Women</a></li>
-                  <li><a href="./Pages/Kids/Kids.html" class="nav-link px-2 ">Kids</a></li>
-                  <li><a href="#Featured" class="nav-link px-2 ">Featured</a></li>  
-                </ul>
-            </div>
-        </div>
-        <!-- Bottom nav -->
-        <div class="d-flex align-items-center py-2 px-4 justify-content-between">
-                
-            <form class="search-form  d-flex justify-content-between  col-lg-auto" role="search">
-                <input type="search" class="search-input " placeholder="Search..." aria-label="Search">
-                <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
-            </form>
-
-            <div  class="d-flex justify-content-end  column-gap-3">
-              
-              <button  type="button" class=" login outline_btn column-gap-3 ">
-                <i  class="fa fa-user"></i>
-                <a class="login" href="./Pages/login/logIn.html">user</a>
-              </button>
-
-
-
-              <button  id="signup" type="button" class="btn outline_btn signup "><a  href="./Pages/signUp/signUp.html">signUp</a>
-              </button>
-
-              <div class="userProfile">
-                <i style="font-size: 17px;"  class="fa fa-user"></i>
-                      <a class="" href="./pages/userProfile/userProfile.html">user</a>
-              </div>
-
-                <button id="cart" style="color:var(--primary-color);" class="cartt  " type="submit">
-                    <i href="Pages/Cart/Cart.html" class="fa-solid fa-cart-shopping"></i></i> 
-                    <a href="Pages/Cart/Cart.html">Cart</a>
-                </button>
-
-                
-                <button style="border: none; background: transparent;" >
-                  <i id="dots" class="fa-solid fa-ellipsis"></i>
-
-                </button>
-
-            </div>
-
-        </div>
-
-    </header>
-
-
-    <!-- mobile header -->
-    <!-- smaller than 576  -->
-    
-    <header id="mobile-header" class="  mobile-header">
-        <div class="px-3 py-2  border-bottom ">
-            <div class="d-flex justify-content-between">
-                <img class="logo mx-2" src="assets/logo .png" alt="">
-                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-                    <use xlink:href="#bootstrap" />
-                </svg>
-                
-                <div  class="d-flex align-items-center justify-content-end  column-gap-1">
-                  <button  type="button" class=" login outline_btn column-gap-3 ">
-                      <i  class="fa fa-user"></i>
-                      <a class="login" href="./pages/login/logIn.html">Login</a>
-                    </button>
-                    
-              <div class="userProfile">
-                <i  class="fa fa-user"></i>
-                      <a class="" href="./pages/userProfile/userProfile.html">user</a>
-              </div>
-
-                    <button id="cart" style="color:var(--primary-color);" class="cartt " type="submit">
-                      <i class="fa-solid fa-cart-shopping"></i></i> 
-                      <a href="Pages/Cart/Cart.html">Cart</a>
-                  </button>
-                    <!-- Hamburger menu -->
-                    <i onclick="sidebarHandler()" style="font-size:25px;" class=" mx-2  fa fa-bars"></i>
-            </div>
-
-
-            </div>
-        </div>
-        <!-- Bottom nav -->
-        <div class="d-flex align-items-center py-2 px-4 justify-content-between">
-                
-            <form class="search-form w-100  d-flex justify-content-between  col-lg-auto" role="search">
-                <input type="search" class="search-input " placeholder="Search..." aria-label="Search">
-                <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div>
-
-    </header>
-
-    <!-- SIDEBAR FOR MOBILE HEADER -->
-
-    
-  <div style="height: 100vh; width: 100vw;; z-index: 100;"  id="sideBar" class="hidden  w-100 glassmorphism  flex-column flex-shrink-0 p-3 " style="width: 280px;">
-    <div class="sidebarTop d-flex justify-content-between align-items-center"> 
-      <div class=" d-flex">
-
-         
-        <div  class="d-flex align-items-center justify-content-end  column-gap-1">
+        <div  class="d-flex justify-content-end  column-gap-3">
           
+          <button  type="button" class=" login outline_btn column-gap-3 ">
+            <i  class="fa fa-user"></i>
+            <a class="login" href="./Pages/login/logIn.html">user</a>
+          </button>
+
+
+
+          <button  id="signup" type="button" class="btn outline_btn signup "><a  href="./Pages/signUp/signUp.html">signUp</a>
+          </button>
+
+          <div class="userProfile">
+            <i style="font-size: 17px;"  class="fa fa-user"></i>
+                  <a class="userr" href="./pages/userProfile/userProfile.html">user</a>
+          </div>
+
+            <button id="cart" style="color:var(--primary-color);" class="cartt  " type="submit">
+                <i href="Pages/Cart/Cart.html" class="fa-solid fa-cart-shopping"></i></i> 
+                <a href="Pages/Cart/Cart.html">Cart</a>
+            </button>
+
+            
+            <button style="border: none; background: transparent;" >
+              <i id="dots" class="fa-solid fa-ellipsis"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- mobile header -->
+<!-- smaller than 576  -->
+
+<header id="mobile-header" class="  mobile-header">
+    <div class="px-3 py-2  border-bottom ">
+        <div class="d-flex justify-content-between">
+            <img class="logo mx-2" src="assets/logo .png" alt="">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                <use xlink:href="#bootstrap" />
+            </svg>
+            
+            <div  class="d-flex align-items-center justify-content-end  column-gap-1">
+              <button  type="button" class=" login outline_btn column-gap-3 ">
+                  <i  class="fa fa-user"></i>
+                  <a class="login" href="./pages/login/logIn.html">Login</a>
+                </button>
+                
           <div class="userProfile">
             <i  class="fa fa-user"></i>
-            <a  href="./pages/userProfile/userProfile.html">User</a>
+                  <a class="userr" href="./pages/userProfile/userProfile.html">user</a>
           </div>
+
+                <button id="cart" style="color:var(--primary-color);" class="cartt " type="submit">
+                  <i class="fa-solid fa-cart-shopping"></i></i> 
+                  <a href="Pages/Cart/Cart.html">Cart</a>
+              </button>
+                <!-- Hamburger menu -->
+                <i onclick="sidebarHandler()" style="font-size:25px;" class=" mx-2  fa fa-bars"></i>
+        </div>
+
+
+        </div>
+    </div>
+    <!-- Bottom nav -->
+    <div class="d-flex align-items-center py-2 px-4 justify-content-between">
             
-          <button  type="button" class=" login outline_btn column-gap-3 ">
-              <i  class="fa fa-user"></i>
-              <a class="login" href="./Pages/login/logIn.html">Login</a>
-            </button>
-            <!-- Hamburger menu -->
-            
-        <!-- SIDEBAR -->
-
-
-
-        <!-- <button type="button" class="btn  btn-primary">Sign-up</button> -->
-        <!-- <button class="cart  d-flex align-items-center column-gap-2 " type="submit">
-            <i class="fa-solid fa-cart-shopping"></i></i> 
-            <a href="">Cart</a>
-        </button> -->
+        <form class="search-form w-100  d-flex justify-content-between  col-lg-auto" role="search">
+            <input type="search" class="search-input " placeholder="Search..." aria-label="Search">
+            <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
+        </form>
     </div>
 
+</header>
+
+<!-- SIDEBAR FOR MOBILE HEADER -->
+
+
+<div style="height: 100vh; width: 100vw;; z-index: 100;"  id="sideBar" class="hidden  w-100 glassmorphism  flex-column flex-shrink-0 p-3 " style="width: 280px;">
+<div class="sidebarTop d-flex justify-content-between align-items-center"> 
+  <div class=" d-flex">
+
+     
+    <div  class="d-flex align-items-center justify-content-end  column-gap-1">
+      
+      <div class="userProfile">
+        <i  class="fa fa-user"></i>
+        <a class="userr"  href="./pages/userProfile/userProfile.html">User</a>
       </div>
-        <button style="background-color: transparent; border: none;" >
-            <i onclick="sidebarHandler()"  style="font-size: 30px;" class="fa-solid fa-xmark"></i>
+        
+      <button  type="button" class=" login outline_btn column-gap-3 ">
+          <i  class="fa fa-user"></i>
+          <a class="login" href="./Pages/login/logIn.html">Login</a>
         </button>
-    
-    </div>
+        <!-- Hamburger menu -->
+        
+    <!-- SIDEBAR -->
 
-    <hr>
 
-    <ul class="nav nav-pills flex-column mb-auto">
-      <li><a onclick="sidebarHandler" href="./Pages/Men/Men.html" class="nav-link px-2 ">Men</a></li>
-      <li><a onclick="sidebarHandler" href="./Pages/Women/Women.html" class="nav-link px-2 ">Women</a></li>
-      <li><a onclick="sidebarHandler()" href="./Pages/Kids/Kids.html" class="nav-link px-2 ">Kids</a></li>
-      <li><a onclick="sidebarHandler()" href="#Featured" class="nav-link px-2 ">Featured</a></li>
-  
-    </ul>
-    <hr>
-    
-  </div>  
+
+    <!-- <button type="button" class="btn  btn-primary">Sign-up</button> -->
+    <!-- <button class="cart  d-flex align-items-center column-gap-2 " type="submit">
+        <i class="fa-solid fa-cart-shopping"></i></i> 
+        <a href="">Cart</a>
+    </button> -->
+</div>
+
+  </div>
+    <button style="background-color: transparent; border: none;" >
+        <i onclick="sidebarHandler()"  style="font-size: 30px;" class="fa-solid fa-xmark"></i>
+    </button>
+</div>
+
+<hr>
+
+<ul class="nav nav-pills flex-column mb-auto">
+  <li><a id="nav-one" onclick="sidebarHandler()" href="./Pages/Men/Men.html" class="nav-link px-2 ">Men</a></li>
+  <li><a id="nav-two" onclick="sidebarHandler()" href="./Pages/Women/Women.html" class="nav-link px-2 ">Women</a></li>
+  <li><a id="nav-three" onclick="sidebarHandler()" href="./Pages/Kids/Kids.html" class="nav-link px-2 ">Kids</a></li>
+  <li><a id="nav-four" onclick="sidebarHandler()" href="#Featured" class="nav-link px-2 ">Featured</a></li>
+
+</ul>
+<hr>
+
+</div>  
 
 
   <!-- SIDEBAR  NOT COMPLETED  -->

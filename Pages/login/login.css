@@ -1,5 +1,5 @@
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -36,9 +36,9 @@
 .signin-form{
     height: 85vh;
     margin: auto;
-    width: 100vw;
+    width: fit-content;
     overflow: hidden;
-    
+    margin-top: 10vh;
 }
 
 .form{
