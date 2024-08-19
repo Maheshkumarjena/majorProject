@@ -14,7 +14,7 @@ const mensSection = [
         originalPrice: 1799,
         discount: "47% off",
         dealTag: "Hot Deal",
-        imageUrl: "../../assets/mts2.webp"
+        imageUrl: "../../assets/kurta4.webp"
     },
     {
         brand: "ALLEN SOLLY",
@@ -23,7 +23,7 @@ const mensSection = [
         originalPrice: 1999,
         discount: "35% off",
         dealTag: "Best Seller",
-        imageUrl: "../../assets/mts3.webp"
+        imageUrl: "../../assets/west3.png"
     },
     {
         brand: "LEVI'S",
@@ -32,7 +32,7 @@ const mensSection = [
         originalPrice: 2499,
         discount: "28% off",
         dealTag: "Limited Offer",
-        imageUrl: "../../assets/mts4.webp"
+        imageUrl: "../../assets/kurta2.webp"
     },
     {
         brand: "WRANGLER",
@@ -41,7 +41,7 @@ const mensSection = [
         originalPrice: 2199,
         discount: "32% off",
         dealTag: "Hot Deal",
-        imageUrl: "../../assets/mts5.webp"
+        imageUrl: "../../assets/west2.png"
     },
     {
         brand: "PARKER",
@@ -50,7 +50,7 @@ const mensSection = [
         originalPrice: 2199,
         discount: "32% off",
         dealTag: "Hot Deal",
-        imageUrl: "../../assets/ms2.webp"
+        imageUrl: "../../assets/kurta1.webp"
     },
     {
         brand: "WRONG",
@@ -59,7 +59,7 @@ const mensSection = [
         originalPrice: 2199,
         discount: "32% off",
         dealTag: "Hot Deal",
-        imageUrl: "../../assets/ms1.webp"
+        imageUrl: "../../assets/west3.png"
     },
     {
         brand: "SPYKAR",
@@ -68,7 +68,7 @@ const mensSection = [
         originalPrice: 2199,
         discount: "32% off",
         dealTag: "Hot Deal",
-        imageUrl: "../../assets/ms4.webp"
+        imageUrl: "../../assets/ww2.webp"
     },
     {
         brand: "TOMMY HILFIGER",
@@ -77,12 +77,12 @@ const mensSection = [
         originalPrice: 2199,
         discount: "32% off",
         dealTag: "Hot Deal",
-        imageUrl: "../../assets/ms5.webp"
+        imageUrl: "../../assets/ww1.webp"
     },
 ];
 
 const container = document.getElementsByClassName('con-cards');
-const heading= document.getElementsByClassName('product-dtl')[0].innerHTML='For men'
+const heading= document.getElementsByClassName('product-dtl')[0].innerHTML='For Women'
 
 mensSection.forEach(product => {
     const card = document.createElement('div');

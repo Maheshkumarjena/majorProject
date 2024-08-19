@@ -31,6 +31,24 @@
 
 }
 
+/* Hide scrollbar for all elements */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* Make scrollbar background transparent */
+}
+
+body, html {
+  overflow: hidden; /* Hide overflow to remove scrollbars */
+  overflow-y: auto; /* Re-enable vertical scrolling */
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: none; /* Hide scrollbar */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+}
+
 
 a{
   text-decoration: none;
@@ -413,23 +431,6 @@ color: var(--secondary-color);
 
 
 
-
-
-.con-section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1vw;
-    margin-bottom: 10px;
-  }
-  
-  
-  .con-card:hover{
-    transform: scale(1.015) ;
-    transition: 0.3s;
-    
-  }
-  
   
   
   

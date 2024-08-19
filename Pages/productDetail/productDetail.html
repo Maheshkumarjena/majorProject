@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail Page</title>
+    <link rel="stylesheet" href="./productDetail.css">
+</head>
+<body>
+
+    <!-- Main Product Section -->
+    <main>
+        <section class="product-detail">
+            <!-- Product Images -->
+            <div class="product-images">
+                <img src="../../assets/ms2.webp" alt="Product Image" class="main-image">
+                <div class="thumbnails">
+                    <img src="../../assets/ms2.webp" alt="Thumbnail 1" class="thumbnail">
+                    <img src="../../assets/ms2.webp" alt="Thumbnail 2" class="thumbnail">
+                    <img src="../../assets/ms2.webp" alt="Thumbnail 3" class="thumbnail">
+                </div>
+            </div>
+
+            <!-- Product Information -->
+            <div class="product-info">
+                <h1 class="product-name">Product Name</h1>
+                <p class="price">$99.99</p>
+                <p class="rating">⭐⭐⭐⭐☆ (123 reviews)</p>
+                <p class="short-description">Brief overview of the product.</p>
+
+                <!-- Purchase Options -->
+                <div class="purchase-options">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" value="1" min="1">
+                    <label for="size">Size:</label>
+                    <select id="size">
+                        <option value="s">Small</option>
+                        <option value="m">Medium</option>
+                        <option value="l">Large</option>
+                    </select>
+                    <label for="color">Color:</label>
+                    <select id="color">
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                    </select>
+                    <button onclick="addToCart()">Add to Cart</button>
+                </div>
+
+                <!-- Additional Information -->
+                <div class="additional-info">
+                    <h2>Shipping Information</h2>
+                    <p>Estimated delivery: 3-5 business days. Free shipping on orders over $50.</p>
+                    <h2>Return Policy</h2>
+                    <p>30-day return policy. <a href="#">Read More</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Products -->
+        <section class="related-products">
+            <h2>Related Products</h2>
+            <div class="related-items">
+                <div class="related-item">Product 1</div>
+                <div class="related-item">Product 2</div>
+                <div class="related-item">Product 3</div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
