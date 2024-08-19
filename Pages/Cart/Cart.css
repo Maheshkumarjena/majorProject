@@ -1,7 +1,9 @@
 
 
 
-
+.col{
+  height: 100vw;
+}
 
 .cart-item {
     display: flex;
