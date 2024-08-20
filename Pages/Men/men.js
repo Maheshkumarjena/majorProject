@@ -89,7 +89,8 @@ mensSection.forEach(product => {
     card.className = 'con-card';
     
     card.innerHTML = `
-        <img src="${product.imageUrl}" alt="${product.title}">
+        <a onclick="extractData(this)">
+    <img class='item-image' src="${product.imageUrl}" alt="${product.title}">
         <div class="con-text">
             <p class="brand-name">${product.brand}</p>
             <p class="product-title">${product.title}</p>
@@ -98,9 +99,37 @@ mensSection.forEach(product => {
                 <span class="original-price">₹${product.originalPrice}</span>
                 <span class="discount">${product.discount}</span>
             </div>
-            <div class="deal-tag">${product.dealTag}</div>
-        </div>
+            <div class="deal-tag">${product.dealTag}
+            </div>
+         </div>
+    </a>
     `;
     
     container[0].appendChild(card);
 });
+
+
+
+
+
+
+function extractData(element) {
+    const productCard = element.closest('.con-card'); // Get the closest parent element with the class 'con-card'
+    
+    const productData = {
+        imageUrl: productCard.querySelector('.item-image').src,
+        brand: productCard.querySelector('.brand-name').textContent,
+        title: productCard.querySelector('.product-title').textContent,
+        currentPrice: productCard.querySelector('.current-price').textContent,
+        originalPrice: productCard.querySelector('.original-price').textContent,
+        discount: productCard.querySelector('.discount').textContent,
+        dealTag: productCard.querySelector('.deal-tag').textContent
+    };
+
+    // Save product data to localStorage
+    localStorage.setItem('selectedProduct', JSON.stringify(productData));
+    
+    // Open the product detail page
+    
+    window.location.href = '../productDetail/productDetail.html';
+}

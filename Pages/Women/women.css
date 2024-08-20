@@ -65,6 +65,9 @@
     object-fit: contain;
     
   }
+  .con-card:hover{
+    object-fit: contain;
+  }
   
   .con-title {
     font-size: 16px;
