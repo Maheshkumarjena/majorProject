@@ -120,28 +120,24 @@ window.onload = function () {
         el.textContent = `$${currentTotal.toFixed(2)}`;
     });
 }
-
-// Function to update the quantity and price
-
+// Function to update the total price
 function updatePrice() {
     let items = document.querySelectorAll('.item');
-    console.log("item",items)
     let total = 0;
 
     items.forEach(item => {
         let quantity = parseInt(item.querySelector('.quantity-input').value);
-        console.log(quantity)
-        let price = parseFloat(item.querySelector('.price').textContent.replace('$', ''));
+        let price = parseFloat(item.querySelector('.price').textContent.replace('₹', ''));
         total += quantity * price;
     });
 
-    console.log(total)
-    document.querySelector('.subtotal-price').textContent = `$${total}`;
-    
-    let checkout=document.getElementById('Checkout').innerText=`$${total+20}`
-    let final= document.querySelector('#final').innerText = `$${total+20}`;
+    document.querySelector('.subtotal-price').textContent = `₹${total}`;
+    let shipping = 20; // Assuming a flat shipping rate of ₹20
+    document.getElementById('Checkout').innerText = `₹${total + shipping}`;
+    document.querySelector('#final').innerText = `₹${total + shipping}`;
 
-    saveTotalToLocalStorage(total); // Save the updated total to localStorage
+    // Optional: Save the updated total to localStorage if needed
+    localStorage.setItem('totalPrice', total);
 }
 
 // Function to increase quantity
@@ -158,26 +154,28 @@ function decreaseQuantity(button) {
         quantityInput.value = parseInt(quantityInput.value) - 1;
         updatePrice();
     }
+    else{
+        deleteItem(button);
+        updatePrice()
+    }
 }
 
-updatePrice()
+// Function to populate cart items dynamically from localStorage
+function populateCartItems() {
+    const cartItems = JSON.parse(localStorage.getItem('cartItem')) || [];
+    const itemsContainer = document.querySelector('.items');
+    itemsContainer.innerHTML = ''; // Clear the container first
 
-console.log('bottom script .js')
-
-document.addEventListener('DOMContentLoaded', () => {
-
-    const cartData = JSON.parse(localStorage.getItem('cartItem'));
-    
-    cartData.forEach(product => {
+    cartItems.forEach(product => {
         const card = document.createElement('div');
         card.className = 'card item mb-3';
-    
+
         card.innerHTML = `
             <div class="card-body">
                 <div class="d-flex justify-content-between">
                     <div class="d-flex flex-row align-items-center">
                         <div>
-                            <img src="${product.imageUrl}" class="img-fluid rounded-3" alt="${product.title}" style="width: 65px;">
+                            <img src="${product.imageUrl}" class="img-fluid  rounded-3" alt="${product.title}" style="width: 65px;">
                         </div>
                         <div class="ms-3">
                             <h5>${product.title}</h5>
@@ -188,28 +186,49 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="cart-item">
                             <div class="quantity-control">
                                 <button onclick="decreaseQuantity(this)" class="minus-btn">-</button>
-                                <input type="text" class="quantity-input" value=${product.productQuantity} readonly>
+                                <input type="text" class="quantity-input" value="${product.productQuantity}" readonly>
                                 <button onclick="increaseQuantity(this)" class="plus-btn">+</button>
                             </div>
                         </div>
                         <div>
                             <h5 class="mb-0 price">₹${product.currentPrice}</h5>
                         </div>
-                        <a class="delete" href="#!" style="color: #cecece;">
+                        <a onclick="deleteItem(this)" class="delete" href="#!" style="color: #cecece;">
                             <i class="fas fa-trash-alt"></i>
                         </a>
                     </div>
                 </div>
             </div>
         `;
-    
-        // Assuming there's a container where these cards should be appended
-        document.querySelector('.items').appendChild(card);
+
+        itemsContainer.appendChild(card);
     });
-    
 
-});
+    // Call updatePrice to reflect the initial total price based on the populated cart items
+    updatePrice();
+}
 
 
+let cartItems = JSON.parse(localStorage.getItem('cartItem')) || [];
 
-// 
+console.log(cartItems)
+
+// Call the populateCartItems function when the page loads to display cart items
+window.onload = populateCartItems();
+
+function deleteItem(item) {
+    const card = item.closest('.card');
+
+    const imgTag = card.querySelector('img');
+    const imgSrc = imgTag.src;
+
+    let cartItems = JSON.parse(localStorage.getItem('cartItem')) || [];
+
+    cartItems = cartItems.filter(cartItem => cartItem.imageUrl !== imgSrc);
+
+    localStorage.setItem('cartItem', JSON.stringify(cartItems));
+
+    // Optionally, remove the card element from the DOM
+    card.remove();
+    updatePrice()
+}

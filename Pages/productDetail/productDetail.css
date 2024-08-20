@@ -22,7 +22,7 @@ main {
 /* Product Detail Section */
 .product-detail {
     display: flex;
-    flex-wrap: wrap;
+flex-direction: row;
     gap: 20px;
     background: #fff;
     padding: 20px;
@@ -164,6 +164,7 @@ main {
 @media (max-width: 768px) {
     .product-detail {
         flex-direction: column;
+        gap: 2vw;
     }
 
     .product-info {
@@ -173,6 +174,7 @@ main {
     .related-items {
         flex-direction: column;
     }
+    
 }
 
 @media (max-width: 480px) {

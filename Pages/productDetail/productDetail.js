@@ -20,35 +20,38 @@ window.addEventListener('beforeunload', () => {
 });
 
 
-
 function addToCart() {
-    const productCard = document.getElementsByClassName('product-detail')[0]; 
+    const productCard = document.getElementsByClassName('product-detail')[0];
 
     const productData = {
         imageUrl: productCard.querySelector('.main-image').src,
         brand: productCard.querySelector('.brand-name').textContent,
         title: productCard.querySelector('.product-name').textContent,
         currentPrice: productCard.querySelector('.price').textContent.slice(1),
-        productQuantity:productCard.querySelector('.product-quantity').value
+        productQuantity: Number(productCard.querySelector('.product-quantity').value)
     };
 
     // Retrieve existing cart items from localStorage
     let cartItems = JSON.parse(localStorage.getItem('cartItem')) || [];
 
-    if(cartItems.length>=1){
+    let productExists = false;
 
-        cartItems.forEach(element => {
-            if(element.imageUrl===productCard.imageUrl){
-                element.productQuantity+=Number(productCard.querySelector('.product-quantity').value);
-                return;
-            }
-                
-        });
+    // Check if the product already exists in the cart
+    cartItems.forEach(item => {
+        if (item.imageUrl === productData.imageUrl) {
+            // If it exists, increase the quantity
+            item.productQuantity += productData.productQuantity;
+            productExists = true;
+        }
+    });
+
+    // If the product does not exist, add it to the cart
+    if (!productExists) {
+        cartItems.push(productData);
     }
-
-    // Add the new product data to the cartItems array
-    cartItems.push(productData);
 
     // Save the updated cartItems array back to localStorage
     localStorage.setItem('cartItem', JSON.stringify(cartItems));
 }
+
+// localStorage.removeItem('cartItem')

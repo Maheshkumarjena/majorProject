@@ -13,26 +13,26 @@
         <!-- Billing Information -->
         <div class="section">
             <h2>Billing Information</h2>
-            <form class="billing-form">
+            <form class="billing-form" id="billing-form">
                 <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="John" required>
+                <input type="text" id="fname" name="firstname" placeholder="mahesh" required>
 
                 <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Doe" required>
+                <input type="text" id="lname" name="lastname" placeholder="kumar" required>
 
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                <input type="email" id="email" name="email" placeholder="mkj@gmail.com" required>
 
                 <label for="address">Address</label>
                 <input type="text" id="address" name="address" placeholder="1234 Main St" required>
 
                 <label for="city">City</label>
-                <input type="text" id="city" name="city" placeholder="New York" required>
+                <input type="text" id="city" name="city" placeholder="Jajpur" required>
 
                 <label for="state">State</label>
-                <input type="text" id="state" name="state" placeholder="NY" required>
+                <input type="text" id="state" name="state" placeholder="Odisha" required>
 
-                <label for="zip">Zip Code</label>
+                <label for="zip">Pin Code</label>
                 <input type="text" id="zip" name="zip" placeholder="10001" required>
             </form>
         </div>
@@ -40,36 +40,25 @@
         <!-- Order Summary -->
         <div class="section">
             <h2>Order Summary</h2>
-            <div class="order-summary">
-                <p><span>Product Name</span><span>₹1,049</span></p>
-                <p><span>Shipping</span><span>₹50</span></p>
-                <hr>
-                <p><strong><span>Total</span><span>₹1,099</span></strong></p>
+            <div class="order-summary" id="order-summary">
+                <!-- Cart items will be dynamically populated here -->
             </div>
-        </div>
-
-        <!-- Payment -->
-        <div class="section">
-            <h2>Payment</h2>
-            <form class="payment-form">
-                <label for="cardname">Name on Card</label>
-                <input type="text" id="cardname" name="cardname" placeholder="John Doe" required>
-
-                <label for="cardnumber">Credit Card Number</label>
-                <input type="text" id="cardnumber" name="cardnumber" placeholder="1111-2222-3333-4444" required>
-
-                <label for="expdate">Exp Date</label>
-                <input type="text" id="expdate" name="expdate" placeholder="MM/YY" required>
-
-                <label for="cvv">CVV</label>
-                <input type="text" id="cvv" name="cvv" placeholder="123" required>
-            </form>
+            <hr>
+            <div>
+                <p><strong>Total: ₹<span id="total-amount">0</span></strong></p>
+                <p><strong>Shipping Charge: ₹<span id="shipping-charge">20</span></strong></p>
+                <p><strong>Grand Total: ₹<span id="grand-total">20</span></strong></p>
+            </div>
         </div>
 
         <!-- Submit Button -->
         <div class="section">
-            <button type="submit" class="btn">Place Order</button>
+            <button type="button" class="btn" id="place-order-btn">Place Order</button>
+            <div id="warning-message" style="color: red; margin-top: 10px;"></div>
         </div>
     </div>
+    <script src="./checkout.js">
+       
+    </script>
 </body>
 </html>
