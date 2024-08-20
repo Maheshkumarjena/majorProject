@@ -89,7 +89,7 @@ mensSection.forEach((product) => {
   card.className = "con-card";
 
   card.innerHTML = `
-    <a href='../productDetail/productDetail.html' >
+    <a href='../productDetail/productDetail.html>
     <img src="${product.imageUrl}" alt="${product.title}">
         <div class="con-text">
             <p class="brand-name">${product.brand}</p>

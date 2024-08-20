@@ -79,7 +79,7 @@ const mensSection = [
         dealTag: "Hot Deal",
         imageUrl: "../../assets/ms5.webp"
     },
-];
+]; 
 
 const container = document.getElementsByClassName('con-cards');
 const heading= document.getElementsByClassName('product-dtl')[0].innerHTML='For men'

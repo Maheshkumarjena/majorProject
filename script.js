@@ -162,5 +162,54 @@ function decreaseQuantity(button) {
 
 updatePrice()
 
+console.log('bottom script .js')
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const cartData = JSON.parse(localStorage.getItem('cartItem'));
+    
+    cartData.forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'card item mb-3';
+    
+        card.innerHTML = `
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-row align-items-center">
+                        <div>
+                            <img src="${product.imageUrl}" class="img-fluid rounded-3" alt="${product.title}" style="width: 65px;">
+                        </div>
+                        <div class="ms-3">
+                            <h5>${product.title}</h5>
+                            <p class="mb-0">${product.brand}</p>
+                        </div>
+                    </div>
+                    <div style="padding-left: 1vw;" class="d-flex column-gap-3 flex-row align-items-center">
+                        <div class="cart-item">
+                            <div class="quantity-control">
+                                <button onclick="decreaseQuantity(this)" class="minus-btn">-</button>
+                                <input type="text" class="quantity-input" value=${product.productQuantity} readonly>
+                                <button onclick="increaseQuantity(this)" class="plus-btn">+</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="mb-0 price">₹${product.currentPrice}</h5>
+                        </div>
+                        <a class="delete" href="#!" style="color: #cecece;">
+                            <i class="fas fa-trash-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `;
+    
+        // Assuming there's a container where these cards should be appended
+        document.querySelector('.items').appendChild(card);
+    });
+    
+
+});
+
+
 
 // 

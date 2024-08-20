@@ -1,13 +1,4 @@
 console.log('product detail')
-// extracting elements from the productDetail page
-let mImage = document.getElementsByClassName('main-image');
-let tumbnainImage = document.getElementsByClassName('thumbnail');
-let productName = document.getElementsByClassName('product-name')[0];
-let price = document.getElementsByClassName('price')[0];
-let desc = document.getElementsByClassName('short-description')[0];
-let cartbtn = document.getElementById('cartBtn');
-console.log("mImage",mImage);
-// productDetail.js
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -17,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.main-image').src = productData.imageUrl;
         document.querySelector('.product-name').textContent = productData.title;
         document.querySelector('.price').textContent = productData.currentPrice;
+        document.querySelector('.brand-name').textContent = productData.brand;
         document.querySelectorAll('.thumbnail').forEach(element => {
             element.src=productData.imageUrl
         });
@@ -26,3 +18,37 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('beforeunload', () => {
     localStorage.removeItem('selectedProduct');
 });
+
+
+
+function addToCart() {
+    const productCard = document.getElementsByClassName('product-detail')[0]; 
+
+    const productData = {
+        imageUrl: productCard.querySelector('.main-image').src,
+        brand: productCard.querySelector('.brand-name').textContent,
+        title: productCard.querySelector('.product-name').textContent,
+        currentPrice: productCard.querySelector('.price').textContent.slice(1),
+        productQuantity:productCard.querySelector('.product-quantity').value
+    };
+
+    // Retrieve existing cart items from localStorage
+    let cartItems = JSON.parse(localStorage.getItem('cartItem')) || [];
+
+    if(cartItems.length>=1){
+
+        cartItems.forEach(element => {
+            if(element.imageUrl===productCard.imageUrl){
+                element.productQuantity+=Number(productCard.querySelector('.product-quantity').value);
+                return;
+            }
+                
+        });
+    }
+
+    // Add the new product data to the cartItems array
+    cartItems.push(productData);
+
+    // Save the updated cartItems array back to localStorage
+    localStorage.setItem('cartItem', JSON.stringify(cartItems));
+}
