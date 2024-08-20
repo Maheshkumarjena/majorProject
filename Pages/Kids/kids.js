@@ -1,7 +1,7 @@
 function adjustUnderlines() {
     // Get all elements with the class 'underline-word'
     const words = document.querySelectorAll('#nav-one');
-
+  
     words.forEach(wordElement => {
         // Create a new underline element
         const underlineElement = document.createElement('div');
@@ -11,7 +11,7 @@ function adjustUnderlines() {
         const wordHeight = wordElement.offsetHeight;
         const wordOffsetTop = wordElement.offsetTop;
         const wordOffsetLeft = wordElement.offsetLeft;
-
+  
         // Style the underline
         underlineElement.style.position = 'absolute';
         underlineElement.style.left = `${wordOffsetLeft+2}px`;
@@ -25,102 +25,101 @@ function adjustUnderlines() {
         container.style.position = 'relative';
         container.appendChild(underlineElement);
     });
-}
-
-// Adjust the underline width when the document is loaded
-document.addEventListener('DOMContentLoaded', adjustUnderlines);
-
-// Optionally adjust underline width on window resize
-window.addEventListener('DOMContentLoaded', adjustUnderlines);
-
-
-let nav1=document.querySelectorAll('#nav-four');
-
-// console.log(nav1)
-nav1.forEach(e => {
+  }
+  
+  // Adjust the underline width when the document is loaded
+  document.addEventListener('DOMContentLoaded', adjustUnderlines);
+  
+  // Optionally adjust underline width on window resize
+  window.addEventListener('DOMContentLoaded', adjustUnderlines);
+  
+  
+  let nav1=document.querySelectorAll('#nav-four');
+  
+  // console.log(nav1)
+  nav1.forEach(e => {
     e.style.display="none"
-});
+  });
 
-
-const mensSection = [
+  const kidsSection = [
     {
-        brand: "PETER ENGLAND",
-        title: "Men Slim Fit Self Design Shirt",
-        currentPrice: 949,
-        originalPrice: 1799,
-        discount: "47% off",
+        brand: "KIDSVILLE",
+        title: "Kids Slim Fit Self Design T-Shirt",
+        currentPrice: 599,
+        originalPrice: 999,
+        discount: "40% off",
         dealTag: "Hot Deal",
-        imageUrl: "../../assets/mts2.webp"
+        imageUrl: "../../assets/bjk.webp"
     },
     {
-        brand: "ALLEN SOLLY",
-        title: "Men Regular Fit Solid Casual Shirt",
-        currentPrice: 1299,
-        originalPrice: 1999,
-        discount: "35% off",
+        brand: "MINI CLUB",
+        title: "Kids Regular Fit Solid Casual Dress",
+        currentPrice: 799,
+        originalPrice: 1199,
+        discount: "33% off",
         dealTag: "Best Seller",
-        imageUrl: "../../assets/mts3.webp"
+        imageUrl: "../../assets/gsw.webp"
     },
     {
-        brand: "LEVI'S",
-        title: "Men Slim Fit Denim Shirt",
-        currentPrice: 1799,
-        originalPrice: 2499,
-        discount: "28% off",
+        brand: "TOYLAND",
+        title: "Kids Slim Fit Denim Shorts",
+        currentPrice: 899,
+        originalPrice: 1399,
+        discount: "36% off",
         dealTag: "Limited Offer",
-        imageUrl: "../../assets/mts4.webp"
+        imageUrl: "../../assets/gww.webp"
     },
     {
-        brand: "WRANGLER",
-        title: "Men Slim Fit Checkered Shirt",
-        currentPrice: 1499,
-        originalPrice: 2199,
-        discount: "32% off",
+        brand: "LITTLE FOLKS",
+        title: "Kids Slim Fit Checkered Dress",
+        currentPrice: 799,
+        originalPrice: 1199,
+        discount: "33% off",
         dealTag: "Hot Deal",
-        imageUrl: "../../assets/mts5.webp"
+        imageUrl: "../../assets/bs.jpg"
     },
     {
-        brand: "PARKER",
-        title: "Men Slim Fit Checkered Shirt",
-        currentPrice: 1499,
-        originalPrice: 2199,
+        brand: "PLAYFUL KIDS",
+        title: "Kids Slim Fit Printed Dress",
+        currentPrice: 749,
+        originalPrice: 1099,
         discount: "32% off",
         dealTag: "Hot Deal",
-        imageUrl: "../../assets/ms2.webp"
+        imageUrl: "../../assets/gtw.webp"
     },
     {
-        brand: "WRONG",
-        title: "Men Slim Fit Checkered Shirt",
-        currentPrice: 1499,
-        originalPrice: 2199,
-        discount: "32% off",
+        brand: "TOYS R US",
+        title: "Kids Slim Fit Striped T-Shirt",
+        currentPrice: 699,
+        originalPrice: 999,
+        discount: "30% off",
         dealTag: "Hot Deal",
-        imageUrl: "../../assets/ms1.webp"
+        imageUrl: "../../assets/gs.webp"
     },
     {
-        brand: "SPYKAR",
-        title: "Men Slim Fit Checkered Shirt",
-        currentPrice: 1499,
-        originalPrice: 2199,
-        discount: "32% off",
+        brand: "CARTOON NETWORK",
+        title: "Kids Slim Fit Character Dress",
+        currentPrice: 849,
+        originalPrice: 1199,
+        discount: "29% off",
         dealTag: "Hot Deal",
-        imageUrl: "../../assets/ms4.webp"
+        imageUrl: "../../assets/bts.webp"
     },
     {
-        brand: "TOMMY HILFIGER",
-        title: "Men Slim Fit Checkered Shirt",
-        currentPrice: 1499,
-        originalPrice: 2199,
-        discount: "32% off",
+        brand: "FROSTY",
+        title: "Kids Slim Fit Graphic Hoodie",
+        currentPrice: 999,
+        originalPrice: 1399,
+        discount: "29% off",
         dealTag: "Hot Deal",
-        imageUrl: "../../assets/ms5.webp"
+        imageUrl: "../../assets/bsw.webp"
     },
-]; 
+];
 
-const container = document.getElementsByClassName('con-cards');
-const heading= document.getElementsByClassName('product-dtl')[0].innerHTML='For men'
-
-mensSection.forEach(product => {
+  const container = document.getElementsByClassName('con-cards');
+  const heading= document.getElementsByClassName('product-dtl')[0].innerHTML='For Kids'
+  
+  kidsSection.forEach(product => {
     const card = document.createElement('div');
     card.className = 'con-card';
     
@@ -142,14 +141,14 @@ mensSection.forEach(product => {
     `;
     
     container[0].appendChild(card);
-});
-
-
-
-
-
-
-function extractData(element) {
+  });
+  
+  
+  
+  
+  
+  
+  function extractData(element) {
     const productCard = element.closest('.con-card'); // Get the closest parent element with the class 'con-card'
     
     const productData = {
@@ -161,11 +160,12 @@ function extractData(element) {
         discount: productCard.querySelector('.discount').textContent,
         dealTag: productCard.querySelector('.deal-tag').textContent
     };
-
+  
     // Save product data to localStorage
     localStorage.setItem('selectedProduct', JSON.stringify(productData));
     
     // Open the product detail page
     
     window.location.href = '../productDetail/productDetail.html';
-}
+  }
+  
