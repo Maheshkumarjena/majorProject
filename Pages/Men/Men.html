@@ -1,259 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-    crossorigin="anonymous"
-    />
-    
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-    />
-    
-    <link rel="stylesheet" href="./men.css">
-    <link rel="stylesheet" href="../../global.css">
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="../../global.css">
+  <link rel="stylesheet" href="./men.css">
 
 
 </head>
+
 <body>
   <!-- Desktop header -->
 
-  <header id="large-header" class="Header p-3 large-header "> 
+  <header id="large-header" class="Header p-3 large-header glassmorphism ">
     <div class=" H-container  d-flex flex-wrap align-items-center justify-content-between ">
-        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-            <img class="logo" src="../../assets/logo .png" alt="logo here">
-        </a>
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <img class="logo" src="../../assets/logo .png" alt="logo here">
+      </a>
 
-        <ul class="nav col-12 col-lg-auto  mb-md-0">
-          <li><a id="nav-one" onclick="sidebarHandler()" href="../men/men.html" class="nav-link px-2 ">Men</a></li>
-          <li><a id="nav-two" onclick="sidebarHandler()" href="../Women/Women.html" class="nav-link px-2 ">Women</a></li>
-          <li><a id="nav-three" onclick="sidebarHandler()" href="../Kids/Kids.html" class="nav-link px-2 ">Kids</a></li>
-        
-        </ul>
+      <ul class="nav col-12 col-lg-auto  mb-md-0">
+        <li><a id="nav-one" onclick="sidebarHandler()" href="../men/men.html" class="nav-link px-2 ">Men</a></li>
+        <li><a id="nav-two" onclick="sidebarHandler()" href="../Women/Women.html" class="nav-link px-2 ">Women</a></li>
+        <li><a id="nav-three" onclick="sidebarHandler()" href="../Kids/Kids.html" class="nav-link px-2 ">Kids</a></li>
 
-        <form class="search-form col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-            <input type="search" class="search-input " placeholder="Search..." aria-label="Search">
-            <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
-        </form>
+      </ul>
 
-        <div  class="d-flex justify-content-end  column-gap-3">
-          
-          <button  type="button" class=" login outline_btn column-gap-3 ">
-            <i  class="fa fa-user"></i>
-            <a class="login" href="../login/logIn.html">Login</a>
-          </button>
+      <form class="search-form col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+        <input type="search" class="search-input " placeholder="Search..." aria-label="Search">
+        <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
+      </form>
 
-            <button id="signup" type="button" class="btn outline_btn signup "><a  href="../signUp/signUp.html">signUp</a>
-            </button>
+      <div class="d-flex justify-content-end  column-gap-3">
 
-            
-          <div class="userProfile">
-            <i  class="fa fa-user"></i>
-                  <a class="userr" href="../userProfile/userProfile.html">user</a>
+        <button type="button" class=" login outline_btn column-gap-3 ">
+          <i class="fa fa-user"></i>
+          <a class="login" href="../login/logIn.html">Login</a>
+        </button>
+
+        <button id="signup" type="button" class="btn outline_btn signup "><a href="../signUp/signUp.html">signUp</a>
+        </button>
+
+
+        <div class="userProfile">
+          <i class="fa fa-user"></i>
+          <a class="userr" href="../userProfile/userProfile.html">user</a>
+        </div>
+
+
+        <button id="cart" style="color:var(--primary-color);" class="cartt  " type="submit">
+          <i href="../Cart/Cart.html" class="fa-solid fa-cart-shopping"></i></i>
+          <a href="../Cart/Cart.html">Cart</a>
+        </button>
+
+        <!--DROPDOWN BTN  -->
+        <button onclick="dropDownHandler()" style="border: none; background: transparent;">
+          <i id="dots" class="fa-solid fa-ellipsis"></i>
+
+          <!-- DROPDOWN  -->
+
+          <div id="dropdown"
+            class=" hidden2  flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center">
+            <ul class="dropdown-menu d-block position-static mx-0 shadow w-220px" data-bs-theme="light">
+              <li>
+                <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+                  <svg class="bi" width="16" height="16">
+                    <use xlink:href="#files" />
+                  </svg>
+                  Documents
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+                  <svg class="bi" width="16" height="16">
+                    <use xlink:href="#image-fill" />
+                  </svg>
+                  Photos
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+                  <svg class="bi" width="16" height="16">
+                    <use xlink:href="#film" />
+                  </svg>
+                  Movies
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+                  <svg class="bi" width="16" height="16">
+                    <use xlink:href="#music-note-beamed" />
+                  </svg>
+                  Music
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+                  <svg class="bi" width="16" height="16">
+                    <use xlink:href="#joystick" />
+                  </svg>
+                  Games
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li>
+                <a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="#">
+                  <svg class="bi" width="16" height="16">
+                    <use xlink:href="#trash" />
+                  </svg>
+                  Trash
+                </a>
+              </li>
+            </ul>
           </div>
 
 
-            <button id="cart" style="color:var(--primary-color);" class="cartt  " type="submit">
-                <i href="../Cart/Cart.html" class="fa-solid fa-cart-shopping"></i></i> 
-                <a href="../Cart/Cart.html">Cart</a>
-            </button>
 
-            <button style="border: none; background: transparent;" >
-              <i id="dots" class="fa-solid fa-ellipsis"></i>
 
-            </button>
-        </div>
+
+
+        </button>
+
+      </div>
     </div>
-</header>
+  </header>
 
 
 
   <!-- small Header -->
 
-  <header id="small-header" class="Header  small-header">
+  <header id="small-header" class="Header  small-header glassmorphism">
     <div class="px-3 py-2  border-bottom ">
-        <div class="d-flex justify-content-between">
-            <img class="logo mx-2" src="../../assets/logo .png" alt="">
-            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-                <use xlink:href="#bootstrap" />
-            </svg>
-            </a>
+      <div class="d-flex justify-content-between">
+        <img class="logo mx-2" src="../../assets/logo .png" alt="">
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+          <use xlink:href="#bootstrap" />
+        </svg>
+        </a>
 
-            <ul class="nav col-12 col-lg-auto  mb-md-0">
-              <li><a id="nav-one" onclick="sidebarHandler()" href="../men/men.html" class="nav-link px-2 ">Men</a></li>
-          <li><a id="nav-two" onclick="sidebarHandler()" href="../Women/Women.html" class="nav-link px-2 ">Women</a></li>
+        <ul class="nav col-12 col-lg-auto  mb-md-0">
+          <li><a id="nav-one" onclick="sidebarHandler()" href="../men/men.html" class="nav-link px-2 ">Men</a></li>
+          <li><a id="nav-two" onclick="sidebarHandler()" href="../Women/Women.html" class="nav-link px-2 ">Women</a>
+          </li>
           <li><a id="nav-three" onclick="sidebarHandler()" href="../Kids/Kids.html" class="nav-link px-2 ">Kids</a></li>
-              <li><a id="nav-four" onclick="sidebarHandler()" href="#Featured" class="nav-link px-2 ">Featured</a></li>
-            
-            </ul>
-        </div>
-    </div>
-    <!-- Bottom nav -->
-    <div class="d-flex align-items-center py-2 px-4 justify-content-between">
-            
-        <form class="search-form  d-flex justify-content-between  col-lg-auto" role="search">
-            <input type="search" class="search-input " placeholder="Search..." aria-label="Search">
-            <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
-        </form>
+          <li><a id="nav-four" onclick="sidebarHandler()" href="#Featured" class="nav-link px-2 ">Featured</a></li>
 
-        <div  class="d-flex justify-content-end  column-gap-3">
-          
-          <button  type="button" class=" login outline_btn column-gap-3 ">
-            <i  class="fa fa-user"></i>
-            <a class="login" href="../login/logIn.html">user</a>
-          </button>
-
-
-
-          <button  id="signup" type="button" class="btn outline_btn signup "><a  href="../signUp/signUp.html">signUp</a>
-          </button>
-
-          <div class="userProfile">
-            <i style="font-size: 17px;"  class="fa fa-user"></i>
-                  <a class="userr" href="../userProfile/userProfile.html">user</a>
-          </div>
-
-            <button id="cart" style="color:var(--primary-color);" class="cartt  " type="submit">
-                <i href="../Cart/Cart.html" class="fa-solid fa-cart-shopping"></i></i> 
-                <a href="../Cart/Cart.html">Cart</a>
-            </button>
-
-            
-            <button style="border: none; background: transparent;" >
-              <i id="dots" class="fa-solid fa-ellipsis"></i>
-
-            </button>
-
-        </div>
-
-    </div>
-
-</header>
-
-
-<!-- mobile header -->
-<!-- smaller than 576  -->
-
-<header id="mobile-header" class="  mobile-header">
-    <div class="px-3 py-2  border-bottom ">
-        <div class="d-flex justify-content-between">
-            <img class="logo mx-2" src="../../assets/logo .png" alt="">
-            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-                <use xlink:href="#bootstrap" />
-            </svg>
-            
-            <div  class="d-flex align-items-center justify-content-end  column-gap-1">
-              <button  type="button" class=" login outline_btn column-gap-3 ">
-                  <i  class="fa fa-user"></i>
-                  <a class="login" href="../login/logIn.html">Login</a>
-                </button>
-                
-          <div class="userProfile">
-            <i  class="fa fa-user"></i>
-                  <a class="userr" href="../userProfile/userProfile.html">user</a>
-          </div>
-
-                <button id="cart" style="color:var(--primary-color);" class="cartt " type="submit">
-                  <i class="fa-solid fa-cart-shopping"></i></i> 
-                  <a href="../Cart/Cart.html">Cart</a>
-              </button>
-                <!-- Hamburger menu -->
-                <i onclick="sidebarHandler()" style="font-size:25px;" class=" mx-2  fa fa-bars"></i>
-        </div>
-
-
-        </div>
-    </div>
-    <!-- Bottom nav -->
-    <div class="d-flex align-items-center py-2 px-4 justify-content-between">
-            
-        <form class="search-form w-100  d-flex justify-content-between  col-lg-auto" role="search">
-            <input type="search" class="search-input " placeholder="Search..." aria-label="Search">
-            <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
-        </form>
-    </div>
-
-</header>
-
-<!-- SIDEBAR FOR MOBILE HEADER -->
-
-
-<div style="height: 100vh; width: 100vw;; z-index: 100;"  id="sideBar" class="hidden  w-100 glassmorphism  flex-column flex-shrink-0 p-3 " style="width: 280px;">
-<div class="sidebarTop d-flex justify-content-between align-items-center"> 
-  <div class=" d-flex">
-
-     
-    <div  class="d-flex align-items-center justify-content-end  column-gap-1">
-      
-      <div class="userProfile">
-        <i  class="fa fa-user"></i>
-        <a class="userr"  href="../userProfile/userProfile.html">User</a>
+        </ul>
       </div>
-        
-      <button  type="button" class=" login outline_btn column-gap-3 ">
-          <i  class="fa fa-user"></i>
-          <a class="login" href="../login/logIn.html">Login</a>
+    </div>
+    <!-- Bottom nav -->
+    <div class="d-flex align-items-center py-2 px-4 justify-content-between">
+
+      <form class="search-form  d-flex justify-content-between  col-lg-auto" role="search">
+        <input type="search" class="search-input " placeholder="Search..." aria-label="Search">
+        <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
+      </form>
+
+      <div class="d-flex justify-content-end  column-gap-3">
+
+        <button type="button" class=" login outline_btn column-gap-3 ">
+          <i class="fa fa-user"></i>
+          <a class="login" href="../login/logIn.html">user</a>
         </button>
-        <!-- Hamburger menu -->
-        
-    <!-- SIDEBAR -->
 
 
 
-    <!-- <button type="button" class="btn  btn-primary">Sign-up</button> -->
-    <!-- <button class="cart  d-flex align-items-center column-gap-2 " type="submit">
+        <button id="signup" type="button" class="btn outline_btn signup "><a href="../signUp/signUp.html">signUp</a>
+        </button>
+
+        <div class="userProfile">
+          <i style="font-size: 17px;" class="fa fa-user"></i>
+          <a class="userr" href="../userProfile/userProfile.html">user</a>
+        </div>
+
+        <button id="cart" style="color:var(--primary-color);" class="cartt  " type="submit">
+          <i href="../Cart/Cart.html" class="fa-solid fa-cart-shopping"></i></i>
+          <a href="../Cart/Cart.html">Cart</a>
+        </button>
+
+
+        <button onclick="dropDownHandler()" style="border: none; background: transparent;">
+          <i id="dots" class="fa-solid fa-ellipsis"></i>
+
+          <!-- DROPDOWN  -->
+
+          <div id="dropdown"
+            class=" hidden2  flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center">
+            <ul class="dropdown-menu d-block position-static mx-0 shadow w-220px" data-bs-theme="light">
+              <li>
+                <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+                  <svg class="bi" width="16" height="16">
+                    <use xlink:href="#files" />
+                  </svg>
+                  Documents
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+                  <svg class="bi" width="16" height="16">
+                    <use xlink:href="#image-fill" />
+                  </svg>
+                  Photos
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+                  <svg class="bi" width="16" height="16">
+                    <use xlink:href="#film" />
+                  </svg>
+                  Movies
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+                  <svg class="bi" width="16" height="16">
+                    <use xlink:href="#music-note-beamed" />
+                  </svg>
+                  Music
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+                  <svg class="bi" width="16" height="16">
+                    <use xlink:href="#joystick" />
+                  </svg>
+                  Games
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li>
+                <a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="#">
+                  <svg class="bi" width="16" height="16">
+                    <use xlink:href="#trash" />
+                  </svg>
+                  Trash
+                </a>
+              </li>
+            </ul>
+          </div>
+
+
+
+
+
+
+        </button>
+
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- mobile header -->
+  <!-- smaller than 576  -->
+
+  <header id="mobile-header" class="  mobile-header glassmorphism">
+    <div class="px-3 py-2  border-bottom ">
+      <div class="d-flex justify-content-between">
+        <img class="logo mx-2" src="../../assets/logo .png" alt="">
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+          <use xlink:href="#bootstrap" />
+        </svg>
+
+        <div class="d-flex align-items-center justify-content-end  column-gap-1">
+          <button type="button" class=" login outline_btn column-gap-3 ">
+            <i class="fa fa-user"></i>
+            <a class="login" href="../login/logIn.html">Login</a>
+          </button>
+
+          <div class="userProfile">
+            <i class="fa fa-user"></i>
+            <a class="userr" href="../userProfile/userProfile.html">user</a>
+          </div>
+
+          <button id="cart" style="color:var(--primary-color);" class="cartt " type="submit">
+            <i class="fa-solid fa-cart-shopping"></i></i>
+            <a href="../Cart/Cart.html">Cart</a>
+          </button>
+          <!-- Hamburger menu -->
+          <i onclick="sidebarHandler()" style="font-size:25px;" class=" mx-2  fa fa-bars"></i>
+        </div>
+
+
+      </div>
+    </div>
+    <!-- Bottom nav -->
+    <div class="d-flex align-items-center py-2 px-4 justify-content-between">
+
+      <form class="search-form w-100  d-flex justify-content-between  col-lg-auto" role="search">
+        <input type="search" class="search-input " placeholder="Search..." aria-label="Search">
+        <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+
+  </header>
+
+  <!-- SIDEBAR FOR MOBILE HEADER -->
+
+
+  <div style="height: 100vh; width: 100vw;; z-index: 100;" id="sideBar"
+    class="hidden  w-100 glassmorphism  flex-column flex-shrink-0 p-3 " style="width: 280px;">
+    <div class="sidebarTop d-flex justify-content-between align-items-center">
+      <div class=" d-flex">
+
+
+        <div class="d-flex align-items-center justify-content-end  column-gap-1">
+
+          <div class="userProfile">
+            <i class="fa fa-user"></i>
+            <a class="userr" href="../userProfile/userProfile.html">User</a>
+          </div>
+
+          <button type="button" class=" login outline_btn column-gap-3 ">
+            <i class="fa fa-user"></i>
+            <a class="login" href="../login/logIn.html">Login</a>
+          </button>
+          <!-- Hamburger menu -->
+
+          <!-- SIDEBAR -->
+
+
+
+          <!-- <button type="button" class="btn  btn-primary">Sign-up</button> -->
+          <!-- <button class="cart  d-flex align-items-center column-gap-2 " type="submit">
         <i class="fa-solid fa-cart-shopping"></i></i> 
         <a href="">Cart</a>
     </button> -->
-</div>
+        </div>
+
+      </div>
+      <button style="background-color: transparent; border: none;">
+        <i onclick="sidebarHandler()" style="font-size: 30px;" class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <hr>
+
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li><a id="nav-one" onclick="sidebarHandler()" href="../men/men.html" class="nav-link px-2 ">Men</a></li>
+      <li><a id="nav-two" onclick="sidebarHandler()" href="../Women/Women.html" class="nav-link px-2 ">Women</a></li>
+      <li><a id="nav-three" onclick="sidebarHandler()" href="../Kids/Kids.html" class="nav-link px-2 ">Kids</a></li>
+      <li><a id="nav-four" onclick="sidebarHandler()" href="#Featured" class="nav-link px-2 ">Featured</a></li>
+
+    </ul>
+    <hr>
 
   </div>
-    <button style="background-color: transparent; border: none;" >
-        <i onclick="sidebarHandler()"  style="font-size: 30px;" class="fa-solid fa-xmark"></i>
-    </button>
-</div>
-
-<hr>
-
-<ul class="nav nav-pills flex-column mb-auto">
-  <li><a id="nav-one" onclick="sidebarHandler()" href="../men/men.html" class="nav-link px-2 ">Men</a></li>
-          <li><a id="nav-two" onclick="sidebarHandler()" href="../Women/Women.html" class="nav-link px-2 ">Women</a></li>
-          <li><a id="nav-three" onclick="sidebarHandler()" href="../Kids/Kids.html" class="nav-link px-2 ">Kids</a></li>
-  <li><a id="nav-four" onclick="sidebarHandler()" href="#Featured" class="nav-link px-2 ">Featured</a></li>
-
-</ul>
-<hr>
-
-</div>  
 
 
-<div class="con-section">
-  <div class="con-section-header">
+  <div style="margin-top: 5vw;" class="con-section">
+    <div class="con-section-header">
       <h2 class="product-dtl">Rakhi Gifting Specials</h2>
+    </div>
+    <hr />
+    <div class="con-cards">
+
+
+
+    </div>
   </div>
-  <hr/>
-  <div class="con-cards">
-
-  
-      
-  </div>
-</div>
 
 
-    
-<script src="../../script.js"></script>
-<script src="./men.js"></script>
-<!-- <script src="../productDetail/productDetail.js"></script> -->
+
+  <script src="../../script.js"></script>
+  <script src="./men.js"></script>
+  <!-- <script src="../productDetail/productDetail.js"></script> -->
 
 
 </body>

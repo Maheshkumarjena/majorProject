@@ -50,8 +50,30 @@ const sidebarHandler = () => {
         element.classList.remove('flex');
         element.classList.add('hidden');
         document.body.style.overflow = 'scroll';
-
     }
+
+   
+};
+
+const element2 = document.getElementById('dropdown');
+   console.log(
+    "drop down ---->>",element2
+   )
+   const dropDownHandler = () => {
+    const dropdowns = document.querySelectorAll('#dropdown');
+    
+    dropdowns.forEach((dropdown) => {
+        const hasHiddenClass = dropdown.classList.contains('hidden2');
+        const hasFlexClass = dropdown.classList.contains('flex2');
+
+        if (hasHiddenClass) {
+            dropdown.classList.remove('hidden2');
+            dropdown.classList.add('flex2');
+        } else if (hasFlexClass) {
+            dropdown.classList.remove('flex2');
+            dropdown.classList.add('hidden2');
+        }
+    });
 };
 
 // signUp js

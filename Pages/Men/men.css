@@ -153,3 +153,15 @@
 .discount{
     font-size: 11px;
 }
+
+
+@media (max-width: 1030px ){
+  
+  #dropdown {
+    position: absolute !important;
+    top: 62px !important;
+    right: 1vw !important;
+  
+  }
+  
+  }

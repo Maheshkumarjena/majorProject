@@ -38,6 +38,8 @@
 }
 
 body, html {
+  margin: 0;
+  padding: 0;
   overflow: hidden; /* Hide overflow to remove scrollbars */
   overflow-y: auto; /* Re-enable vertical scrolling */
   scroll-behavior: smooth; /* Enable smooth scrolling */
@@ -220,32 +222,53 @@ a{
   }
 
   .glassmorphism {
-    border-radius: 0.75rem;
     border: 1px solid var(--secondary-color);
     background-color: transparent;
-    box-shadow: inset 10px -50px 94px 0 var(--shadow-color);
+    /* box-shadow: inset 10px -50px 94px 0 var(--shadow-color); */
     backdrop-filter: blur(10px);
-    padding: 1.25rem;
+    /* padding: 1.25rem; */
   }
   
 
-  
+  /* General Reset and Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Hide horizontal overflow */
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
 
-body {
-    display: flex;
-    flex-direction: column;
-    scroll-behavior: smooth;
-    /* background-color: #30325b !important; */
-    overflow-x: hidden !important;
-    font-family: Arial, sans-serif;
-    background-color: var(--background-color);
-    color: var(--primary-color);
-  }
-  
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* Ensure scrollbars are hidden in Firefox and IE/Edge */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Header Visibility */
+#large-header {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  display: none; /* Default to hidden, adjust in media queries */
+}
+
 
 .hidden {
     top:0;
     left: 110vw;
+    display: none;
+  }
+
+.hidden2 {
+    /* top:0; */
+    /* left: 110vw; */
     display: none;
   }
   
@@ -258,17 +281,28 @@ body {
 
   }
   
+  
+  .flex2 {
+
+    display: flex;
+  
+  }
+  
 
 
 #small-header{
+  background-color: transparent;
+  position: sticky;
+  top: 0;
     width: 100vw;
 display: flex;
 flex-direction: column;
 }
 
 
-#large-header{
-    display: none;
+.sticky-top{
+  position: sticky;
+  top: 0;
 }
 
 #mobile-header{
@@ -308,7 +342,8 @@ flex-direction: column;
 
 
 .Header{
-    background-color: var(--background-color);
+
+    background-color: transparent;
     color: var(--primary-color) ;
 }
 
@@ -422,38 +457,30 @@ color: var(--secondary-color);
 }
 
 
+/* DROPDOWN */
 
+#dropdown {
+  position: absolute ;
+  right: 0vw ;
+  top: 6px ;
+}
 
-
-
-
-
-
-
-
-  
-  
-  
-  
   
   @media (min-width: 1030px) {
-      
-      #large-header{
-          display: block;
-      }
-      #small-header{
-          display: none;
-      }
-      
-  #mobile-header{
-      display: none;
-  }
-  
-  
-  #sideBar{
-      display: none;
-  }
-  
+    #large-header {
+      width: 100vw;
+      display: block;
+      position: fixed;
+      top: 0;
+      z-index: 1020;
+      background-color: transparent; /* Ensure it's above other content */
+    }
+    #small-header, #mobile-header, #sideBar {
+      display: none; /* Hide other headers and sidebars */
+    }
+
+    
+
   }  
 
 
@@ -466,7 +493,12 @@ color: var(--secondary-color);
 
     
 #small-header{
-    display: block;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  display: block;
+  z-index: 1040; /* Ensure it's above other content */
+  background-color: transparent;
 }
 
 
@@ -526,3 +558,10 @@ color: var(--secondary-color);
 
 /* product type card css */
 
+
+/* Custom CSS for sticky header */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 1020; /* Ensure it stays above other content */
+}
