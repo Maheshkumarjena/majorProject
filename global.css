@@ -460,10 +460,12 @@ color: var(--secondary-color);
 /* DROPDOWN */
 
 #dropdown {
+  padding: 0 !important;
   position: absolute ;
-  right: 0vw ;
-  top: 6px ;
+  right: 2vw ;
+  top: 60px ;
 }
+
 
   
   @media (min-width: 1030px) {
