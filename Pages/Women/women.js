@@ -1,37 +1,23 @@
-function adjustUnderlines() {
-  // Get all elements with the class 'underline-word'
-  const words = document.querySelectorAll('#nav-one');
+function ChangeLook() {
+    // Get all elements with the class 'underline-word'
+    const words = document.querySelectorAll('#nav-two');
 
-  words.forEach(wordElement => {
-      // Create a new underline element
-      const underlineElement = document.createElement('div');
-      
-      // Calculate the width and position
-      const wordWidth = wordElement.offsetWidth;
-      const wordHeight = wordElement.offsetHeight;
-      const wordOffsetTop = wordElement.offsetTop;
-      const wordOffsetLeft = wordElement.offsetLeft;
+    words.forEach(wordElement => {
+        // Create a new underline element
+        
+        wordElement.style.fontFamily='saint-sarif';
+        wordElement.style.color='purple';
+        wordElement.style.transform='scale(1.4)';
 
-      // Style the underline
-      underlineElement.style.position = 'absolute';
-      underlineElement.style.left = `${wordOffsetLeft+2}px`;
-      underlineElement.style.top = `${wordOffsetTop + wordHeight}px`;
-      underlineElement.style.width = `${wordWidth-2}px`;
-      underlineElement.style.height = '1px'; // Thickness of the underline
-      underlineElement.style.backgroundColor = 'black'; // Color of the underline
-      
-      // Append the underline element to the container
-      const container = wordElement.parentElement;
-      container.style.position = 'relative';
-      container.appendChild(underlineElement);
-  });
+
+    });
 }
 
 // Adjust the underline width when the document is loaded
-document.addEventListener('DOMContentLoaded', adjustUnderlines);
+document.addEventListener('DOMContentLoaded', ChangeLook);
 
 // Optionally adjust underline width on window resize
-window.addEventListener('DOMContentLoaded', adjustUnderlines);
+window.addEventListener('DOMContentLoaded', ChangeLook);
 
 
 let nav1=document.querySelectorAll('#nav-four');
