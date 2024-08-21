@@ -1,5 +1,5 @@
  // Retrieve cart items from localStorage
- const cartItems = JSON.parse(localStorage.getItem('cartItem')) || [];
+ const CI = JSON.parse(localStorage.getItem('cartItem')) || [];
 
  // Reference to the order summary container
  const orderSummary = document.getElementById('order-summary');
@@ -15,7 +15,7 @@
 
  // Function to populate order summary
  function populateOrderSummary() {
-     cartItems.forEach(item => {
+     CI.forEach(item => {
          const itemTotal = item.currentPrice * item.productQuantity;
          totalAmount += itemTotal;
 
@@ -47,12 +47,13 @@
 // Function to handle form submission
 function handleOrder() {
     if (validateForm()) {
-        warningMessageEl.textContent = 'Order placed successfully';
+        warningMessageEl.textContent = 'Order placed successfully.\n Redirecting you to the order page in 3 seconds';
         // Proceed with form submission or order placement logic
         setTimeout(() => {
             warningMessageEl.textContent = '';
+            window.location.href = "../Order/Order.html";
 
-        }, 3000);
+        }, 4000);
 
     } else {
         warningMessageEl.textContent = 'Please fill all the necessary fields.';
@@ -67,6 +68,8 @@ function handleOrder() {
 
 populateOrderSummary();
 placeOrderBtn.addEventListener('click', handleOrder);
+
+
 
 
  // Populate order summary on page load

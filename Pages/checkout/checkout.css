@@ -9,6 +9,12 @@ body {
     padding: 20px;
 }
 
+
+Header{
+    display: block !important;
+}
+
+
 .checkout-container {
     width: 100%;
     max-width: 600px;

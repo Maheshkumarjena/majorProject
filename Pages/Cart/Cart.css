@@ -2,6 +2,11 @@
   height: 100vh; /* Set height to 100vh instead of 100vw for better responsiveness */
 }
 
+
+Header{
+  display: block !important;
+}
+
 .cart-item {
   display: flex;
   align-items: center;

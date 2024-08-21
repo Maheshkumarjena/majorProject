@@ -28,7 +28,7 @@
 <body>
   <!-- Desktop header -->
 
-  <header id="large-header" class="Header glassmorphism p-3 large-header ">
+  <header id="large-header" class="Header p-3 large-header glassmorphism "> 
     <div class=" H-container  d-flex flex-wrap align-items-center justify-content-between ">
         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
             <img class="logo" src="../../assets/logo .png" alt="logo here">
@@ -38,7 +38,6 @@
           <li><a id="nav-one" onclick="sidebarHandler()" href="../men/men.html" class="nav-link px-2 ">Men</a></li>
           <li><a id="nav-two" onclick="sidebarHandler()" href="../Women/Women.html" class="nav-link px-2 ">Women</a></li>
           <li><a id="nav-three" onclick="sidebarHandler()" href="../Kids/Kids.html" class="nav-link px-2 ">Kids</a></li>
-  <li><a id="nav-four" onclick="sidebarHandler()" href="#Featured" class="nav-link px-2 ">Featured</a></li>
         
         </ul>
 
@@ -69,10 +68,61 @@
                 <a href="../Cart/Cart.html">Cart</a>
             </button>
 
-            <button style="border: none; background: transparent;" >
-              <i id="dots" class="fa-solid fa-ellipsis"></i>
-
-            </button>
+              <!--DROPDOWN BTN  -->
+              <button onclick="dropDownHandler()" style="border: none; background: transparent;" >
+                <i id="dots" class="fa-solid fa-ellipsis"></i>
+                
+    <!-- DROPDOWN  -->
+  
+    <div id="dropdown" class=" hidden2  flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center">
+      <ul class="dropdown-menu d-block position-static mx-0 shadow w-220px" data-bs-theme="light">
+        <li>
+          <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+            <svg class="bi" width="16" height="16"><use xlink:href="#files"/></svg>
+            Documents
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+            <svg class="bi" width="16" height="16"><use xlink:href="#image-fill"/></svg>
+            Photos
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+            <svg class="bi" width="16" height="16"><use xlink:href="#film"/></svg>
+            Movies
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+            <svg class="bi" width="16" height="16"><use xlink:href="#music-note-beamed"/></svg>
+            Music
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+            <svg class="bi" width="16" height="16"><use xlink:href="#joystick"/></svg>
+            Games
+          </a>
+        </li>
+        <li><hr class="dropdown-divider"></li>
+        <li>
+          <a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="#">
+            <svg class="bi" width="16" height="16"><use xlink:href="#trash"/></svg>
+            Trash
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+  
+  
+  
+  
+  
+              </button>
+  
         </div>
     </div>
 </header>
@@ -81,7 +131,7 @@
 
   <!-- small Header -->
 
-  <header id="small-header" class="Header glassmorphism  small-header">
+  <header id="small-header" class="Header  small-header glassmorphism">
     <div class="px-3 py-2  border-bottom ">
         <div class="d-flex justify-content-between">
             <img class="logo mx-2" src="../../assets/logo .png" alt="">
@@ -92,9 +142,9 @@
 
             <ul class="nav col-12 col-lg-auto  mb-md-0">
               <li><a id="nav-one" onclick="sidebarHandler()" href="../men/men.html" class="nav-link px-2 ">Men</a></li>
-              <li><a id="nav-two" onclick="sidebarHandler()" href="../Women/Women.html" class="nav-link px-2 ">Women</a></li>
-              <li><a id="nav-three" onclick="sidebarHandler()" href="../Kids/Kids.html" class="nav-link px-2 ">Kids</a></li>
-      <li><a id="nav-four" onclick="sidebarHandler()" href="#Featured" class="nav-link px-2 ">Featured</a></li>
+          <li><a id="nav-two" onclick="sidebarHandler()" href="../Women/Women.html" class="nav-link px-2 ">Women</a></li>
+          <li><a id="nav-three" onclick="sidebarHandler()" href="../Kids/Kids.html" class="nav-link px-2 ">Kids</a></li>
+              <li><a id="nav-four" onclick="sidebarHandler()" href="#Featured" class="nav-link px-2 ">Featured</a></li>
             
             </ul>
         </div>
@@ -129,12 +179,62 @@
                 <a href="../Cart/Cart.html">Cart</a>
             </button>
 
-            
-            <button style="border: none; background: transparent;" >
+
+            <button onclick="dropDownHandler()" style="border: none; background: transparent;" >
               <i id="dots" class="fa-solid fa-ellipsis"></i>
+              
+  <!-- DROPDOWN  -->
+
+         <div id="dropdown" class=" hidden2  flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center">
+    <ul class="dropdown-menu d-block position-static mx-0 shadow w-220px" data-bs-theme="light">
+      <li>
+        <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+          <svg class="bi" width="16" height="16"><use xlink:href="#files"/></svg>
+          Documents
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+          <svg class="bi" width="16" height="16"><use xlink:href="#image-fill"/></svg>
+          Photos
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+          <svg class="bi" width="16" height="16"><use xlink:href="#film"/></svg>
+          Movies
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+          <svg class="bi" width="16" height="16"><use xlink:href="#music-note-beamed"/></svg>
+          Music
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+          <svg class="bi" width="16" height="16"><use xlink:href="#joystick"/></svg>
+          Games
+        </a>
+      </li>
+      <li><hr class="dropdown-divider"></li>
+      <li>
+        <a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="#">
+          <svg class="bi" width="16" height="16"><use xlink:href="#trash"/></svg>
+          Trash
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+
+
+
 
             </button>
 
+  
         </div>
 
     </div>
@@ -145,7 +245,7 @@
 <!-- mobile header -->
 <!-- smaller than 576  -->
 
-<header id="mobile-header" class="glassmorphism  mobile-header">
+<header id="mobile-header" class="  mobile-header glassmorphism">
     <div class="px-3 py-2  border-bottom ">
         <div class="d-flex justify-content-between">
             <img class="logo mx-2" src="../../assets/logo .png" alt="">

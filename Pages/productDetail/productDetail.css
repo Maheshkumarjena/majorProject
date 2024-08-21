@@ -22,8 +22,13 @@ main {
 
 
 
+Header{
+    display: block !important;
+}
+
 /* Product Detail Section */
 .product-detail {
+    margin-top: 5vw;
     display: flex;
 flex-direction: row;
     gap: 20px;

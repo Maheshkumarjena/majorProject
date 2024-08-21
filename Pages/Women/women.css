@@ -153,3 +153,16 @@
 .discount{
   font-size: 11px;
 }
+
+
+@media (min-width:0px) and (max-width:1030px ){
+
+#dropdown {
+  padding: 0 !important;
+  position: absolute !important;
+  top: 110px !important;
+  right: 4vw !important;
+
+}
+
+}
