@@ -33,6 +33,12 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+const Logout=()=>{
+  sessionStorage.clear();
+  localStorage.clear();
+  location.reload();
+  window.location.href = "../../index.html"; // Redirect to another page
+}
 
 // sidebar Handler 
 
@@ -94,6 +100,14 @@ const signup = async () => {
     localStorage.setItem('users', JSON.stringify(users));
 
     console.log('User data stored:', users);
+
+    if(users){
+
+        window.location.href =
+        "../login/logIn.html";
+    }
+
+
 };
 
 console.log("users outside ", users);
@@ -116,7 +130,7 @@ const handlelogin = async () => {
         localStorage.setItem('loggedIn', 'true');
         localStorage.setItem('userName', email.split('@')[0]);
 
-        window.location.href = "../../Home.html"; // Redirect to another page
+        window.location.href = "../../index.html"; // Redirect to another page
     } else {
         console.log("Login failed");
     }

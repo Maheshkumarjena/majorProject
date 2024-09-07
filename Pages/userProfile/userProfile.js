@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const users = JSON.parse(localStorage.getItem('users'));
 
         if (loggedIn === 'true' && userName && users) {
-            const userEmail = `${userName}@example.com`; // Assuming email structure
+            const userEmail = Object.keys(users).find(email => email.startsWith(userName));
             const user = users[userEmail];
 
             if (user) {
@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.querySelector('.profile-header p').textContent = userEmail;
 
                 // Populate personal information form
-                document.getElementById('fullName').value = user.fullName || 'John Doe';
+                document.getElementById('fullName').value = user.fullName || '';
                 document.getElementById('email').value = userEmail;
-                document.getElementById('phone').value = user.phone || '+1 234 567 890';
-                document.getElementById('dob').value = user.dob || '1990-01-01';
+                document.getElementById('phone').value = user.phone || '';
+                document.getElementById('dob').value = user.dob || '';
             }
         } else {
             // Redirect to login if not logged in
@@ -30,10 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const handleLogout = () => {
         localStorage.setItem('loggedIn', 'false');
         localStorage.removeItem('userName');
-        window.location.href = "../../login.html"; // Redirect to login page
+        // window.location.href = "../../login.html"; // Redirect to login page
     };
 
-    
     // Populate user profile on page load
     populateUserProfile();
 
