@@ -22,47 +22,93 @@
 
 </head>
 <body>
+<header id="large-header" class="Header p-3 large-header sticky-top glassmorphism ">
+    <div class=" H-container  d-flex flex-wrap align-items-center justify-content-between ">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <img class="logo" src="../../assets/logo .png" alt="logo here">
+        </a>
 
-    <header id="large-header" class="Header p-3 large-header sticky-top ">
-        <div class=" H-container  d-flex flex-wrap align-items-center justify-content-between ">
-            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                <img class="logo" src="../../assets/logo .png" alt="logo here">
-            </a>
-    
-            <div  class="d-flex justify-content-end  column-gap-4">
-              
-              <button  type="button" class=" login outline_btn column-gap-3 ">
-                <i  class="fa fa-user"></i>
+        <div class="d-flex justify-content-end  column-gap-4">
+
+            <button type="button" class=" login outline_btn column-gap-3 ">
+                <i class="fa fa-user"></i>
                 <a class="login" href="../login/logIn.html">Login</a>
-              </button>
-    
-                <button id="signup" type="button" class="btn outline_btn signup "><a  href="../signUp/signUp.html">signUp</a>
-                </button>
-    
-                
-              <div class="userProfile">
-                <i  class="fa fa-user"></i>
-                      <a class="userr" href="../userProfile/userProfile.html">user</a>
-              </div>
-    
-    
-                <button id="cart" style="color:var(--primary-color);" class="cartt  " type="submit">
-                    <a href="../Cart/Cart.html">
-                        <i href="../Cart/Cart.html" class="fa-solid fa-cart-shopping">
-                        </i> 
-                        <a href="../Cart/Cart.html">Cart</a>
-                    </a>
-                </button>
-    
-                <button style="border: none; background: transparent;" >
-                  <i id="dots" class="fa-solid fa-ellipsis"></i>
-    
-                </button>
+            </button>
+
+            <button id="signup" type="button" class="btn outline_btn signup "><a href="../signUp/signUp.html">signUp</a>
+            </button>
+
+            <div class="userProfile">
+                <i class="fa fa-user"></i>
+                <a class="userr" href="../userProfile/userProfile.html">user</a>
             </div>
+
+            <button id="cart" style="color:var(--primary-color);" class="cartt  " type="submit">
+                <a href="../Cart/Cart.html">
+                    <i href="../Cart/Cart.html" class="fa-solid fa-cart-shopping">
+                    </i>
+                    <a href="../Cart/Cart.html">Cart</a>
+                </a>
+            </button>
+
+            <!--DROPDOWN BTN  -->
+            <button onclick="dropDownHandler()" style="border: none; background: transparent;">
+                <i id="dots" class="fa-solid fa-ellipsis"></i>
+
+                <!-- DROPDOWN  -->
+
+                <div id="dropdown"
+                    class=" hidden2  flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center">
+                    <ul class="dropdown-menu d-block position-static mx-0 shadow w-220px" data-bs-theme="light">
+                        <li>
+                            <a class="dropdown-item d-flex gap-2 align-items-center" href="../../index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex gap-2 align-items-center" href="">
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+                                Setting
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+                                Notifications
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+                                Giftcards/Coupons
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="#">
+                                Wishlist
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li onclick="Logout()">
+                            <a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="#">
+                                LOGOUT
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </button>
         </div>
-    </header>
-    
-    
+    </div>
+</header>
+
+
     <!-- Main Product Section -->
     <main>
         <section class="product-detail">
