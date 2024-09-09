@@ -1,0 +1,41 @@
+I have made all  the page completely RESPONSIVE to seamlessly render in all size of devices , 
+for header section I used 3 header sections , for all three different screen sizes that is mobile size , small size and large size . 
+some  of my elements are bootstrap elements with external css applied by me to modify it's looks and make it responsive . 
+
+Header section ---------->
+I used 3 headers because it was easier to hide one show another with little changes in css it , rather than adding a lot of css to one header .  which I tried  initially but led to too many complications .
+
+
+Product Navigation section ----------->
+then I created section to navigate to different kind of products below the header , which has a horizontal slider , but the pics are yet to be added to it.
+which would be done later on.
+
+
+Offers and details carousal section --------->
+This is a responsive carousal that seamlessly render the image inside it without changing it's ratio IN ALL DEVICE SIZES. Inside it there is a glassmorphism box with a buttion and some text to give description about the contents/offeres/details.. 
+
+
+New arrival carousal section --------->
+This is same as the PRODUCT NAVIGATION section with some changes , it represents the newely availablity of  different type of products .. [it is a product type section , not a product section] hovering over it would show the description about the product . AND the card animation is replicated from some random source and edited  by me to work with the card and section , more ever it to have the horizontal slider .
+
+
+This is a featured products section   --------->
+it is simply to feature products with cards in it , though it might seem simpler but it took me a great deal of time to acheive it's responsivenesss in all kind of device size . it too have some simple button animations that I created in css file.
+
+
+ Recently viewed section --------->
+
+this is a section to show recently viewed products . , it is also responsive 
+
+
+footer section --------->
+
+I haven't worked much on footer section due to lack of time , I had just aligned the sections for responsiveness 
+.
+
+
+
+
+
+
+
